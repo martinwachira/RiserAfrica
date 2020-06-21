@@ -66,8 +66,17 @@
             margin-bottom: 30px;
         }
 
+        /* custom style */
         .app-logo {
             height: 40px;
+        }
+
+        .carrs {
+            /* height: calc(100vh - 75px); */
+            height: 550px;
+            /* width: auto; */
+            text-align: center;
+            position: fixed;
         }
     </style>
 </head>
@@ -89,13 +98,6 @@
                                 <img class="app-logo" src="/images/logo/riser.jpeg" alt="logo">
                             </a>
                         </li>
-                        <!-- <li class="nav-item d-none d-lg-block"></li>
-                        <li class="nav-item d-none d-lg-block"><a class="nav-link" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Email"><i class="ficon feather icon-mail"></i></a>
-                        </li>
-                        <li class="nav-item d-none d-lg-block"><a class="nav-link" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Calendar"><i class="ficon feather icon-calendar"></i></a></li>
-                        <li class="nav-item d-none d-lg-block"><a class="nav-link"><i class="ficon feather icon-star warning"></i></a>
-                        </li>
-                        <li class="nav-item d-none d-lg-block"><a class="nav-link "><i class="ficon feather icon-maximize"></i></a></li> -->
                     </ul>
 
                     <ul class="nav navbar-nav float-right">
@@ -108,7 +110,7 @@
                         </li>
                         <h3 class="dropdown dropdown-language nav-item">
                             <a class="dropdown-toggle nav-link" id="dropdown-flag-3" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <h3> Projects</h3>
+                                <span> Projects</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-flag-3">
                                 <a class="dropdown-item" href="#">
@@ -122,93 +124,99 @@
                                     </i> Youth</a>
                             </div>
                         </h3>
-                        <li class="dropdown dropdown-user nav-item">
+                        <h3 class="dropdown dropdown-user nav-item">
                             <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
                                 <div class="user-nav d-sm-flex d-none">
                                     <span class="user-name text-bold-600">
-                                        User Account
-                                    </span>
-                                    <span class="user-status">
-                                        status
+                                        Account
                                     </span>
                                 </div>
-                                <span>
-                                    <img class="round" src="../../vuexy/app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40"></span>
+                                    <!-- <img class="round" src="../../vuexy/app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40"></span> -->
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-flag-3">
                                 <br>
                                 @if (Route::has('login'))
                                 <!-- <a class="dropdown-item" href="#"> -->
-                                <i class="feather icon-user">
-                                </i>
+                                
                                 @auth
-                                <a href="{{ url('/home') }}">Home</a>
+                                <a  href="{{ url('/home') }}">Home</a>
                                 @else
-                                <a href="{{ route('login') }}">Login</a>
+                                <a class="dropdown-item" href="{{ route('login') }}">
+                                <i class="feather icon-unlock">
+                                </i>
+                                Login</a>
+                                
                                 @if (Route::has('register'))
-                                <br><br>
+                                
+                                <a class="dropdown-item" href="{{ route('register') }}">
                                 <i class="feather icon-user-plus">
                                 </i>
-                                <a href="{{ route('register') }}">Register</a>
+                                Register</a>
+                                
                                 @endif
                                 @endauth</a>
                                 @endif
                                 <!-- <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="feather icon-power"></i> Logout</a> -->
                             </div>
-                        </li>
+    </h3>
                     </ul>
                 </div>
             </div>
 
         </div>
     </nav>
-    <div class="content">
-        <div class="title m-b-md">
-            Riser Africa
-        </div>
-        <div class="card-content">
-            <div class="card-body">
-                <div class="form-group">
-                    <h5>Login Form</h5>
-                    <p> Created Simple Login Form.</p>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#inlineForm">
-                        Launch Modal
-                    </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade text-left" id="inlineForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title" id="myModalLabel33">Inline Login Form </h4>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+    <section id="carousel-options ">
+        <div class="row match-height">
+            <div class="">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body ">
+                            <div id="carousel-interval" class="carousel slide " data-ride="carousel" data-interval="5000">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-interval" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-interval" data-slide-to="1"></li>
+                                    <li data-target="#carousel-interval" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner carrs" role="listbox">
+                                    <div class="carousel-item active">
+                                        <img class="img-fluid" src="/images/slider/dairy.jpg" alt="First slide">
+                                        <div class="carousel-caption">
+                                            <h3>First Slide Label</h3>
+                                            <p>Donut jujubes I love topping I love sweet. Jujubes I love brownie gummi bears I love donut sweet
+                                                chocolate. Tart chocolate marshmallow.Tart carrot cake muffin.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="carousel-caption">
+                                            <h3>First Slide Label</h3>
+                                            <p>Donut jujubes I love topping I love sweet. Jujubes I love brownie gummi bears I love donut sweet
+                                                chocolate. Tart chocolate marshmallow.Tart carrot cake muffin.</p>
+                                        </div>
+                                        <img class="img-fluid" src="/images/slider/irrigation.jpg" alt="Second slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="img-fluid" src="/images/slider/poultry.jpg" alt="Third slide">
+                                    </div>
                                 </div>
-                                <form action="#">
-                                    <div class="modal-body">
-                                        <label>Email: </label>
-                                        <div class="form-group">
-                                            <input type="text" placeholder="Email Address" class="form-control">
-                                        </div>
-
-                                        <label>Password: </label>
-                                        <div class="form-group">
-                                            <input type="password" placeholder="Password" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Login</button>
-                                    </div>
-                                </form>
+                                <a class="carousel-control-prev" href="#carousel-interval" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carousel-interval" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- Carousel Options end -->
+
+    <div class="content">
+        <h4>Projects</h4>
     </div>
 </body>
 
