@@ -1,4 +1,5 @@
 @extends('layouts.custom_style')
+@extends('layouts.nav') 
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -103,14 +104,23 @@
                     <ul class="nav navbar-nav float-right">
                         <li>
                             <h3 class="dropdown dropdown-language nav-item">
-                                <a class="dropdown-toggle nav-link" id="dropdown-flag-3" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="selected-language">Home</span>
+                                <a class="dropdown-toggle nav-link" id="dropdown-flag-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="selected-language"><a href="/"> Home</a></span>
                                 </a>
                             </h3>
                         </li>
+                        &nbsp;&nbsp;
+                        <li>
+                            <h3 class="dropdown dropdown-language nav-item">
+                                <a class="dropdown-toggle nav-link" id="dropdown-flag-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="selected-language"><a href="/about">About</a> </span>
+                                </a>
+                            </h3>
+                        </li>
+                        &nbsp;&nbsp;
                         <h3 class="dropdown dropdown-language nav-item">
-                            <a class="dropdown-toggle nav-link" id="dropdown-flag-3" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span> Projects</span>
+                            <a class="dropdown-toggle nav-link" id="dropdown-flag-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span >Projects</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-flag-3">
                                 <a class="dropdown-item" href="#">
@@ -124,8 +134,9 @@
                                     </i> Youth</a>
                             </div>
                         </h3>
+                        &nbsp;
                         <h3 class="dropdown dropdown-user nav-item">
-                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                        <a class="dropdown-toggle nav-link" id="dropdown-flag-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="user-nav d-sm-flex d-none">
                                     <span class="user-name text-bold-600">
                                         Account

@@ -21,7 +21,6 @@
 
     <link rel="stylesheet" href="{{ asset('vuexy/app-assets/images/ico/apple-icon-120.png') }}">
     <link rel="stylesheet" href="{{ asset('vuexy/app-assets/images/ico/favicon.ico') }}">
-
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
@@ -35,14 +34,21 @@
     <link rel="stylesheet" href="{{ asset('vuexy/app-assets/css/themes/semi-dark-layout.css') }}">
     <link rel="stylesheet" href="{{ asset('vuexy/app-assets/css/core/menu/menu-types/vertical-menu.css') }}">
     <link rel="stylesheet" href="{{ asset('vuexy/app-assets/css/core/colors/palette-gradient.css') }}">
+    <link rel="stylesheet" href="{{ asset('vuexy/app-assets/css/plugins/forms/wizard.css') }}">
     <link rel="stylesheet" href="{{ asset('vuexy/assets/css/style.css') }}">
 </head>
 <body>
 
 </body>
+<script src="{{ asset('vuexy/app-assets/vendors/js/vendors.min.js') }}" ></script>
+
+<script src="{{ asset('vuexy/app-assets/vendors/js/extensions/jquery.steps.min.js') }}" ></script>
+<script src="{{ asset('vuexy/app-assets/vendors/js/forms/validation/jquery.validate.min.js') }}" ></script>
 <!--vuexy js -->
-<script src="{{ asset('vuexty/app-assets/vendors/js/vendors.min.js') }}" defer></script>
-<script src="{{ asset('vuexty/app-assets/js/core/app-menu.js') }}" defer></script>
-<script src="{{ asset('vuexty/app-assets/js/core/app.js') }}" defer></script>
-<script src="{{ asset('vuexty/app-assets/js/scripts/components.js') }}" defer></script>
+<script src="{{ asset('vuexy/app-assets/js/core/app-menu.js') }}" ></script>
+<script src="{{ asset('vuexy/app-assets/js/core/app.js') }}" ></script>
+<script src="{{ asset('vuexy/app-assets/js/scripts/components.js') }}" ></script>
+
+<script src="{{ asset('vuexy/app-assets/js/scripts/forms/wizard-steps.js') }}" ></script>
+
 </html>
