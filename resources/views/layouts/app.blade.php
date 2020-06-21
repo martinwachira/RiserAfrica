@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Riser-Africa') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -16,15 +16,33 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    <!--vuexy icons and fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ asset('vuexy/app-assets/images/ico/apple-icon-120.png') }}">
+    <link rel="stylesheet" href="{{ asset('vuexy/app-assets/images/ico/favicon.ico') }}">
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- vuexy -->
+    <link rel="stylesheet" href="{{ asset('vuexy/app-assets/vendors/css/vendors.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vuexy/app-assets/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('vuexy/app-assets/css/bootstrap-extended.css') }}">
+    <link rel="stylesheet" href="{{ asset('vuexy/app-assets/css/colors.css') }}">
+    <link rel="stylesheet" href="{{ asset('vuexy/app-assets/css/components.css') }}">
+    <link rel="stylesheet" href="{{ asset('vuexy/app-assets/css/themes/dark-layout.css') }}">
+    <link rel="stylesheet" href="{{ asset('vuexy/app-assets/css/themes/semi-dark-layout.css') }}">
+    <link rel="stylesheet" href="{{ asset('vuexy/app-assets/css/core/menu/menu-types/vertical-menu.css') }}">
+    <link rel="stylesheet" href="{{ asset('vuexy/app-assets/css/core/colors/palette-gradient.css') }}">
+    <link rel="stylesheet" href="{{ asset('vuexy/assets/css/style.css') }}">
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Riser-Africa') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -77,4 +95,9 @@
         </main>
     </div>
 </body>
+<!--vuexy js -->
+<script src="{{ asset('vuexty/app-assets/vendors/js/vendors.min.js') }}" defer></script>
+<script src="{{ asset('vuexty/app-assets/js/core/app-menu.js') }}" defer></script>
+<script src="{{ asset('vuexty/app-assets/js/core/app.js') }}" defer></script>
+<script src="{{ asset('vuexty/app-assets/js/scripts/components.js') }}" defer></script>
 </html>
